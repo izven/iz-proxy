@@ -8,7 +8,7 @@ DEFAULT_HOST="127.0.0.1"
 show_menu() {
     while true; do
         clear
-        echo "Git 代理设置菜单:"
+        echo "Git 代理设置:"
         echo "1) 设置 HTTP 代理"
         echo "2) 设置 SOCKS5 代理"
         echo "3) 取消代理设置"
@@ -25,7 +25,7 @@ show_menu() {
             *) echo "❌ 无效选项，请重新输入" ;;
         esac
 
-        read -k1 "?\n按任意键返回菜单..."
+        # read -k1 "?\n按任意键返回菜单..."
     done
 }
 

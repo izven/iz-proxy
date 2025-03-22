@@ -44,7 +44,7 @@ function _inject_settings() {
   _backup_file "$target_file"
   
   if grep -Fq "$start_tag" "$target_file"; then
-    echo "⚠️ 已存在对应设置，请先取消后再设置"
+    echo "⚠️  已存在对应设置，请先取消后再设置"
     return 1
   fi
   
@@ -113,12 +113,12 @@ function _execute_script_if_exists() {
 # 显示菜单
 function _show_menu() {
     # 定义选项
-    local options=("设置Git代理" "设置Flutter镜像")
+    local options=("设置Git代理" "设置Flutter镜像" "退出")
     
     echo -e "\n请选择要设置的代理："
     local i=1
     for option in "${options[@]}"; do
-        echo "$i、$option"
+        echo "$i) $option"
         ((i++))
     done
 }
@@ -126,12 +126,12 @@ function _show_menu() {
 # 主函数入口
 function izproxy() {
     _show_menu
-    # 使用echo打印提示信息，然后使用简单的read来获取输入
+
     echo -n "➡️  请输入选项数字："
     read choice
 
     # 输入验证
-    if ! [[ "$choice" =~ ^[1-2]$ ]]; then
+    if ! [[ "$choice" =~ ^[1-3]$ ]]; then
         echo "❌ 无效输入"
         return
     fi
@@ -139,5 +139,6 @@ function izproxy() {
     case "$choice" in
         1) _execute_script_if_exists "git_proxy.sh" ;;
         2) _execute_script_if_exists "flutter_mirror.sh" ;;
+        3) : ;;
     esac
 }
