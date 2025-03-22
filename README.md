@@ -19,7 +19,7 @@ plugins=(git iz-proxy)
 # 支持
 目前支持:
 - `Git (HTTP SOCKS5)`
-- `Flutter`
+- `Flutter CFUG源、清华源`
 
 # 配置
 :shaved_ice: 
@@ -29,5 +29,7 @@ plugins=(git iz-proxy)
 
 ```bash
 $ rm -rf ~/.iz_mirror_backup
+```
+```bash
 $ rm -rf ~/.oh-my-zsh/custom/plugins/iz-proxy
 ```
