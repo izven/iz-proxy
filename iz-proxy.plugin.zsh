@@ -99,7 +99,7 @@ function _execute_script_if_exists() {
             echo "⚠️  ${script_name} 没有执行权限，正在尝试添加..."
             chmod +x "$full_path"
             if [[ $? -eq 0 ]]; then
-                echo "✅  已成功为 ${script_name} 添加执行权限."
+                echo "✅ 已成功为 ${script_name} 添加执行权限."
                 bash "$full_path"
             else
                 echo "❌ 无法为 ${script_name} 添加执行权限."
