@@ -38,7 +38,10 @@ show_menu() {
                 exit 0
                 ;;
             4) exit 0 ;;          
-            *) echo "❌ 无效选项，请重新输入" ;;
+            *) 
+                echo "❌ 无效选项，请重新输入" 
+                read -p "按回车键继续..."
+                ;;
         esac
 
     done

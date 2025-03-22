@@ -22,7 +22,10 @@ show_menu() {
             2) enable_proxy "socks5" ;;
             3) disable_proxy ;;
             4) exit 0 ;;
-            *) echo "❌ 无效选项，请重新输入" ;;
+            *) 
+                echo "❌ 无效选项，请重新输入" 
+                read -p "按回车键继续..."
+            ;;
         esac
 
         # read -k1 "?\n按任意键返回菜单..."
