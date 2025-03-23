@@ -17,7 +17,7 @@ plugins=(git iz-proxy)
 只需输入`izproxy`即可调用命令，根据显示的菜单进行设置即可
 
 # 支持
-目前支持:
+
 - `Git (HTTP SOCKS5)`
 - `Flutter CFUG源、清华源`
 
